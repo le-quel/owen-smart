@@ -1,0 +1,22 @@
+  <div class="banner"> <img src="./view/img/logtren.png" alt=""></div>
+            <div class="menu">
+                <a href="index.php"><img src="./img/logoOwen.png" width="200px" alt=""> </a>
+                <a class="menucon" href=""><i class="fa-solid fa-bars"></i> Danh mục</a>
+                <a class="menucon" href=""><i class="fa-solid fa-location-dot"></i> Máy Cũ Rẻ</a>
+                <a class="menucon" href=""><i class="fa-solid fa-phone-volume"></i> Tiện Ích</a>
+                <input type="text" placeholder="Bạn muốn tìm gì ?">
+                <a class="menucon" href=""><i class="fa-solid fa-location-dot"></i> Cửa hàng</a>
+                <a class="menucon" href="index.php?act=giohang"><i class="fa-solid fa-cart-plus"></i> Giỏ Hàng</a>
+                <?php 
+                        if(isset($_SSESION['username'])&&($_SESSION['username']!="")){
+                            echo '<a class="menucon" href="index.php?act=dangky"><i class="fa-solid fa-user"></i> Đăng Ký</a>';
+                        }else{
+
+                        
+                    ?>
+                <a class="menucon" href="index.php?act=dangky"><i class="fa-solid fa-user"></i> Đăng Ký</a>
+                <a class="menucon" href="index.php?act=dangnhap"><i class="fa-solid fa-user"></i> Đăng nhập</a>
+                <?php
+                            } 
+                        ?>
+            </div>
